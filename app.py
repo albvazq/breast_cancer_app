@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from os import path
 from tensorflow import keras
-from flask import Flask, request, jsonify, Response, send_from_directory
+from flask import Flask, request, jsonify, Response, send_from_directory, render_template
 
 import pandas as pd
 import tensorflow as tf
@@ -67,21 +67,15 @@ else:
 
 @app.route('/')
 def root():
-  return send_from_directory('./public', 'index.html')
+  return send_from_directory('./frontend/dist/kanal', 'index.html')
 
 @app.route('/<path:path>')
 def static_proxy(path):
-  return send_from_directory('./public', 'index.html')
+  return send_from_directory('./frontend/dist/kanal', path)
 
-@app.route('/assets/<path:path>')
-def asset_proxy(path):
-  return send_from_directory('./public/assets', path)
-@app.route('/css/<path:path>')
-def css_proxy(path):
-  return send_from_directory('./public/css', path)
-@app.route('/js/<path:path>')
-def js_proxy(path):
-  return send_from_directory('./public/js', path)
+@app.errorhandler(404)
+def page_not_found(e):
+    return send_from_directory('./frontend/dist/kanal', 'index.html'), 200
 
 @app.route("/api/classification_report")
 def classification_report_view():
