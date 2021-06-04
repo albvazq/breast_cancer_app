@@ -21,7 +21,6 @@ MarkupSafe
 matplotlib
 mkl-fft
 mkl-random
-mkl-service
 numpy
 olefile==0.46
 opt-einsum
