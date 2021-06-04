@@ -1,0 +1,10 @@
+name: breast_cancer_app
+dependencies:
+  - python=3.6
+  - pip:
+    - keras
+    - sklearn
+    - flask
+    - pandas
+    - tensorflow
+    - gunicorn
