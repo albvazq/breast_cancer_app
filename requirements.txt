@@ -1,5 +1,5 @@
 keras
 sklearn
-tensorflow
+tensorflow-cpu
 flask
 pandas
