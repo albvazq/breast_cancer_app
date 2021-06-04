@@ -123,4 +123,4 @@ def predict_view():
 if __name__ == '__main__':
   # This is used when running locally only. When deploying use a webserver process
   # such as Gunicorn to serve the app.
-  app.run(host='127.0.0.1', port=5000, debug=True)
+  app.run(debug=True)
