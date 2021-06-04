@@ -1,0 +1,10 @@
+@import "../../../../node_modules/ed-grid/ed-grid";
+
+app-users {
+  @include ed-container;
+  @include ed-item;
+  @include full;
+  position: relative;
+  box-sizing: border-box;
+
+}

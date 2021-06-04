@@ -1,0 +1,22 @@
+<form class="ed-container ed-item full s-to-center login-form">
+  <div class="ed-container ed-item">
+    <div class="ed-item">
+      <img src="../assets/logo.svg" height="80px" alt="">
+    </div>
+    <div class="ed-container ed-item form">
+      <div class="ed-item s-100 input">
+        <input [(ngModel)]="username" [ngModelOptions]="{standalone: true}" type="text" placeholder="User name">
+      </div>
+      <div class="ed-item s-100 input">
+        <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" placeholder="Password">
+      </div>
+      <div class="ed-item s-100">
+        <button (click)="login()" class="orange" type="button"><i class="icon ion-md-lock"></i> Log in</button>
+      </div>
+    </div>
+    <div class="ed-container ed-item">
+      <span class="s-50 s-to-center">Powered by</span>
+      <img class="s-50 s-to-center" src="../assets/logo.svg" height="80px" alt="">
+    </div>
+  </div>
+</form>

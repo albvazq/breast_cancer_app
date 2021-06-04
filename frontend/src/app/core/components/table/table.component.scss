@@ -1,0 +1,28 @@
+app-table {
+  width: 100%;
+
+  table {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+
+    thead {
+      background: #222;
+      color: #fff;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    tbody {
+      tr {
+        height: 40px;
+        line-height: 40px;
+
+        &:nth-child(even) {
+          background: #eee;
+        }
+      }
+    }
+  }
+}

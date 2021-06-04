@@ -1,0 +1,11 @@
+@import "~ed-grid/ed-grid";
+
+app-root {
+  @include ed-container;
+  @include ed-item;
+  height: 100%;
+  justify-content: center;
+  align-self: center;
+  min-width: 90% !important;
+  position: relative;
+}

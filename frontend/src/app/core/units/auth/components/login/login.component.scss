@@ -1,0 +1,19 @@
+@import "../../../../../../../node_modules/ed-grid/ed-grid";
+
+app-login {
+  @include ed-container;
+  @include ed-item;
+  align-self: center;
+  box-sizing: border-box;
+  border: 1px dashed black;
+  height: 90%;
+  width: 400px;
+  background: url("/assets/510.jpg");
+  border-radius: 20px;
+}
+
+.login-form {
+
+  border-radius: 30px;
+  width: 400px;
+}
