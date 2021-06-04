@@ -3,3 +3,4 @@ sklearn
 tensorflow-cpu
 flask
 pandas
+gunicorn
