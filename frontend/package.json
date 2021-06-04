@@ -29,10 +29,7 @@
     "rxjs": "~6.5.4",
     "strapi-sdk-javascript": "^0.3.3",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2",
-    "@angular/cli": "~9.1.4",
-    "@angular/compiler-cli": "~9.1.4",
-    "typescript": "~3.8.3"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.900.7",
@@ -52,6 +49,9 @@
     "prettier": "^2.0.5",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
-    "tslint": "~6.1.0"
+    "tslint": "~6.1.0",
+    "@angular/cli": "~9.1.4",
+    "@angular/compiler-cli": "~9.1.4",
+    "typescript": "~3.8.3"
   }
 }
