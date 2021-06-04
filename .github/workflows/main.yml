@@ -32,3 +32,4 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           dokku-host: 'svazq.com'
           app-name: 'breast-cancer'
+          remote-branch: 'main'
