@@ -8,7 +8,7 @@
     "url": "git@github.com-albvazq:albvazq/breast_cancer_app.git"
   },
   "scripts": {
-    "postinstall": "cd frontend && npm ci && ng build"
+    "postinstall": "cd frontend && npm ci && npx ng build"
   },
   "author": "",
   "license": "ISC",
