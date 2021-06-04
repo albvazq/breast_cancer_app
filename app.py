@@ -1,4 +1,7 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
+
+import os
+
 from keras.models import Sequential
 from keras.layers import Dense
 from sklearn.model_selection import train_test_split
@@ -121,6 +124,8 @@ def predict_view():
     return {'prediction': pred[0]}
 
 if __name__ == '__main__':
+  print('app running')
   # This is used when running locally only. When deploying use a webserver process
   # such as Gunicorn to serve the app.
-  app.run(debug=True)
+  port = int(os.environ.get("PORT", 5000))
+  app.run(host="0.0.0.0", port=port)
