@@ -5,6 +5,11 @@ import {DashboardComponent} from './dashboard.component';
 import {IncCommonModule} from '../../common/inc-common.module';
 import {MatDialogModule} from '@angular/material/dialog';
 import {UsersModule} from '@app-units/users/users.module';
+import {BrowserModule} from "@angular/platform-browser";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {CommonModule} from "@angular/common";
+import {FormsModule} from "@angular/forms";
+import {EvaluatorModule} from "@app-units/evaluator/evaluator.module";
 
 @NgModule({
   declarations: [
@@ -14,7 +19,10 @@ import {UsersModule} from '@app-units/users/users.module';
     DashboardRoutingModule,
     IncCommonModule,
     MatDialogModule,
-    UsersModule
+    UsersModule,
+    CommonModule,
+      FormsModule,
+      EvaluatorModule
   ],
   exports: [
     DashboardComponent,
@@ -23,3 +31,4 @@ import {UsersModule} from '@app-units/users/users.module';
 })
 export class DashboardModule {
 }
+

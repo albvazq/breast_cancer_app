@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {DashboardService} from "../../services/dashboard.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -8,8 +9,10 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   private collapsed = false;
+  public title = '';
 
-  constructor() {
+  constructor(ds: DashboardService) {
+    ds.title.subscribe(t => this.title = t)
   }
 
   ngOnInit(): void {

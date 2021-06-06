@@ -1,0 +1,13 @@
+@import "../../../../node_modules/ed-grid/ed-grid";
+
+app-board {
+  @include ed-container;
+  @include ed-item;
+  @include full;
+  position: relative;
+  box-sizing: border-box;
+  select {
+    width: 200px;
+    height: 50px;
+  }
+}
