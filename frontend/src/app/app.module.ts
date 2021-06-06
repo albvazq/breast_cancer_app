@@ -9,6 +9,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DashboardModule} from './core/units/dashboard/dashboard.module';
 import {AuthModule} from './core/units/auth/auth.module';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,10 +23,11 @@ import {HttpClientModule} from '@angular/common/http';
     IncCommonModule,
     DashboardModule,
     AuthModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
-    IncCommonModule
+    IncCommonModule,
   ],
   providers: [
   ],

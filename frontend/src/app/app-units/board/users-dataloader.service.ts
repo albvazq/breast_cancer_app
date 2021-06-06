@@ -6,7 +6,7 @@ export class UsersDataloaderService {
   constructor(private http: HttpClient) {
   }
 
-  public getDataSet() {
+  public getUserList() {
     return this.http.get<any>('/api/dataset');
   }
 }

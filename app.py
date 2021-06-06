@@ -117,6 +117,18 @@ def predict_view():
         pred = [1 if y >= 0.5 else 0 for y in pred]  # Threshold
     return {'prediction': pred[0]}
 
+@app.route("/api/params")
+def params_list():
+    params = []
+    for col in dataset.columns:
+        if col != 'diagnosis' and col != 'country':
+            params.append({
+                'name': col,
+                'min': dataset[col].min(),
+                'max': dataset[col].max()
+            })
+    return {'list': params}
+
 if __name__ == '__main__':
   print('app running')
   # This is used when running locally only. When deploying use a webserver process

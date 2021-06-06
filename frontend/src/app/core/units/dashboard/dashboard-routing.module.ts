@@ -1,16 +1,21 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {UsersComponent} from '@app-units/users/users.component';
+import {BoardComponent} from "@app-units/board/board.component";
+import {EvaluatorComponent} from "@app-units/evaluator/evaluator.component";
 
 
 const routes: Routes = [
   {
     path: '',
-    component: UsersComponent
+    component: BoardComponent
   },
   {
-    path: 'users',
-    component: UsersComponent
+    path: 'board',
+    component: BoardComponent
+  },
+  {
+    path: 'evaluator',
+    component: EvaluatorComponent
   }
 ];
 

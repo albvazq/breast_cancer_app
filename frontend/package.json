@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~9.1.4",
     "@angular/router": "~9.1.4",
     "@ngxs/store": "^3.6.2",
+    "d3": "^6.7.0",
     "ed-grid": "^2.9.0",
     "js-cookie": "^2.2.1",
     "jwt-decode": "^2.2.0",
@@ -34,7 +35,10 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "0.900.7",
     "@angular-devkit/build-optimizer": "0.900.7",
+    "@angular/cli": "~9.1.4",
+    "@angular/compiler-cli": "~9.1.4",
     "@angular/language-service": "~9.1.4",
+    "@types/d3": "^6.7.0",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
@@ -50,8 +54,6 @@
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "@angular/cli": "~9.1.4",
-    "@angular/compiler-cli": "~9.1.4",
     "typescript": "~3.8.3"
   }
 }
