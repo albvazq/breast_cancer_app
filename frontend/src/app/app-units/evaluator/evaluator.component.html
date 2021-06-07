@@ -1,16 +1,23 @@
 <div class="ed-container ed-item full">
-  <p>Introduce los valores de cada paramtro separados por comas, en el orden que se muestra la lista de la derecha.</p>
-  <textarea [(ngModel)]="textParams">
+  <table>
+    <tr>
+      <td>
+        <p>Introduce los valores de cada paramtro separados por comas, en el orden que se muestra la lista de la derecha.</p>
+        <textarea [(ngModel)]="textParams">
 
-  </textarea>
-  <input type="button" (click)="parseParams()" value="Cargar">
-  <hr>
-  <ul>
-    <li *ngFor="let p of params.getValue(); let i=index">
-      <span>{{p.name}}:</span>
-      <input step="0.01" type="range" value="{{p.min}}" name="{{p.name}}" min="{{p.min}}" max="{{p.max}}" [(ngModel)]="values[i]">
-      <input type="text" value="{{values[i]}}" [(ngModel)]="values[i]">
-    </li>
-  </ul>
-  <input type="button" (click)="evaluate()" value="Evaluar">
+        </textarea>
+        <input type="button" (click)="parseParams()" value="Cargar">
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let p of params.getValue(); let i=index">
+            <span>{{p.name}}:</span>
+            <input step="0.01" type="range" value="{{p.min}}" name="{{p.name}}" min="{{p.min}}" max="{{p.max}}" [(ngModel)]="values[i]">
+            <input type="text" value="{{values[i]}}" [(ngModel)]="values[i]">
+          </li>
+        </ul>
+        <input type="button" (click)="evaluate()" value="Evaluar">
+      </td>
+    </tr>
+  </table>
 </div>

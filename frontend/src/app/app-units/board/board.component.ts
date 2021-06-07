@@ -3,6 +3,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {DashboardService} from "../../core/services/dashboard.service";
 import * as d3 from 'd3';
 import {APIService} from "../../services/api.service";
+import data from "@app-units/board/data";
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
@@ -13,7 +14,7 @@ export class BoardComponent implements OnInit {
   public param = 'radius_mean';
   private graph;
   private margin = 50;
-  private width = 750 - (this.margin * 2);
+  private width = 500 - (this.margin * 2);
   private height = 400 - (this.margin * 2);
   private data;
 
@@ -26,7 +27,8 @@ export class BoardComponent implements OnInit {
       this.data = data;
       this.createSvg(data);
     });
-}
+    this.makeMap();
+  }
 
   openModal() {
 
@@ -43,6 +45,26 @@ export class BoardComponent implements OnInit {
     this.createSvg(this.data);
   }
 
+  private makeMap() {
+      // var width = 500;
+      // var height = 400;
+//
+      // var projection = d3.geoMercator()
+//
+      // var svg = d3.select("figure#map").append("svg")
+      //     .attr("width", width)
+      //     .attr("height", height);
+      // var path = d3.geoPath().projection(projection);
+      // var g = svg.append("g");
+//
+      // g.selectAll("path")
+      //       .data(topojson.object(data, data.objects.countries)
+      //           .geometries)
+      //     .enter()
+      //       .append("path")
+      //       .attr("d", path)
+  }
+
   private createSvg(data): void {
       d3.selectAll("svg").remove();
       this.graph = d3.select("figure#graph")
@@ -51,6 +73,7 @@ export class BoardComponent implements OnInit {
         .attr("height", this.height + (this.margin * 2))
         .append("g")
         .attr("transform", "translate(" + this.margin + "," + this.margin + ")");
+
 
       this.drawBars(data);
   }

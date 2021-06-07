@@ -24,11 +24,13 @@
     "@angular/router": "~9.1.4",
     "@ngxs/store": "^3.6.2",
     "d3": "^6.7.0",
+    "d3-geo": "^3.0.1",
     "ed-grid": "^2.9.0",
     "js-cookie": "^2.2.1",
     "jwt-decode": "^2.2.0",
     "rxjs": "~6.5.4",
     "strapi-sdk-javascript": "^0.3.3",
+    "topojson": "^3.0.2",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

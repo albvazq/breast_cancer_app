@@ -1,55 +1,77 @@
+<script src="http://d3js.org/topojson.v0.min.js"></script>
 <div class="ed-container ed-item full">
-  <p>
-    Este proyecto brinda una herramienta para la evaluacion de muestras de tejido mediante un modelo basado en una red neuronal
-    la evaluacion se realiza con la finalidad de determinar si la muestra corresponde a una persona con cancer de mama.
-    En esta pagina se pueden visualizar los didstintos parametros de la muestra segmentando por diagnosticos positivos y
-    negativos ademas de permitir filtrar por pais.
-  </p>
-  <span>
-    Pais:
-    <select (change)="onChange($event.target.value)">
-      <option value="">Todos</option>
-      <option value="1">Canada</option>
-      <option value="2">Estados Unidos</option>
-      <option value="3">Mexico</option>
-    </select>
-  </span>
-  <span>
-    <select (change)="onChangeParam($event.target.value)">
-      <option selected value="radius_mean">radius_mean</option>
-      <option value="texture_mean">texture_mean</option>
-      <option value="perimeter_mean">perimeter_mean</option>
-      <option value="area_mean">area_mean</option>
-      <option value="smoothness_mean">smoothness_mean</option>
-      <option value="compactness_mean">compactness_mean</option>
-      <option value="concavity_mean">concavity_mean</option>
-      <option value="concave points_mean">concave points_mean</option>
-      <option value="symmetry_mean">symmetry_mean</option>
-      <option value="fractal_dimension_mean">fractal_dimension_mean</option>
-      <option value="radius_se">radius_se</option>
-      <option value="texture_se">texture_se</option>
-      <option value="perimeter_se">perimeter_se</option>
-      <option value="area_se">area_se</option>
-      <option value="smoothness_se">smoothness_se</option>
-      <option value="compactness_se">compactness_se</option>
-      <option value="concavity_se">concavity_se</option>
-      <option value="concave points_se">concave points_se</option>
-      <option value="symmetry_se">symmetry_se</option>
-      <option value="fractal_dimension_se">fractal_dimension_se</option>
-      <option value="radius_worst">radius_worst</option>
-      <option value="texture_worst">texture_worst</option>
-      <option value="perimeter_worst">perimeter_worst</option>
-      <option value="area_worst">area_worst</option>
-      <option value="smoothness_worst">smoothness_worst</option>
-      <option value="compactness_worst">compactness_worst</option>
-      <option value="concavity_worst">concavity_worst</option>
-      <option value="concave points_worst">concave points_worst</option>
-      <option value="symmetry_worst">symmetry_worst</option>
-      <option value="fractal_dimension_worst">fractal_dimension_worst</option>
-    </select>
-  </span>
-  <span>
-    <h2>Diagnosis vs {{param}}</h2>
-    <figure id="graph"></figure>
-  </span>
+  <table>
+    <tr>
+      <td colspan="2">
+        <p>
+          Este proyecto brinda una herramienta para la evaluacion de muestras de tejido mediante un modelo basado en una red neuronal
+          la evaluacion se realiza con la finalidad de determinar si la muestra corresponde a una persona con cancer de mama.
+          En esta pagina se pueden visualizar los didstintos parametros de la muestra segmentando por diagnosticos positivos y
+          negativos ademas de permitir filtrar por pais.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <span>
+          Pais:
+          <select (change)="onChange($event.target.value)">
+            <option value="">Todos</option>
+            <option value="1">Canada</option>
+            <option value="2">Estados Unidos</option>
+            <option value="3">Mexico</option>
+          </select>
+        </span>
+        <span>
+          <select (change)="onChangeParam($event.target.value)">
+            <option selected value="radius_mean">radius_mean</option>
+            <option value="texture_mean">texture_mean</option>
+            <option value="perimeter_mean">perimeter_mean</option>
+            <option value="area_mean">area_mean</option>
+            <option value="smoothness_mean">smoothness_mean</option>
+            <option value="compactness_mean">compactness_mean</option>
+            <option value="concavity_mean">concavity_mean</option>
+            <option value="concave points_mean">concave points_mean</option>
+            <option value="symmetry_mean">symmetry_mean</option>
+            <option value="fractal_dimension_mean">fractal_dimension_mean</option>
+            <option value="radius_se">radius_se</option>
+            <option value="texture_se">texture_se</option>
+            <option value="perimeter_se">perimeter_se</option>
+            <option value="area_se">area_se</option>
+            <option value="smoothness_se">smoothness_se</option>
+            <option value="compactness_se">compactness_se</option>
+            <option value="concavity_se">concavity_se</option>
+            <option value="concave points_se">concave points_se</option>
+            <option value="symmetry_se">symmetry_se</option>
+            <option value="fractal_dimension_se">fractal_dimension_se</option>
+            <option value="radius_worst">radius_worst</option>
+            <option value="texture_worst">texture_worst</option>
+            <option value="perimeter_worst">perimeter_worst</option>
+            <option value="area_worst">area_worst</option>
+            <option value="smoothness_worst">smoothness_worst</option>
+            <option value="compactness_worst">compactness_worst</option>
+            <option value="concavity_worst">concavity_worst</option>
+            <option value="concave points_worst">concave points_worst</option>
+            <option value="symmetry_worst">symmetry_worst</option>
+            <option value="fractal_dimension_worst">fractal_dimension_worst</option>
+          </select>
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span>
+          <h2>Diagnosis vs {{param}}</h2>
+          <figure id="graph"></figure>
+        </span>
+      </td>
+      <td>
+        <span>
+          <figure id="map"></figure>
+        </span>
+      </td>
+    </tr>
+  </table>
+
+
 </div>
